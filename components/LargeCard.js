@@ -15,6 +15,7 @@ function LargeCard({img,title,description,buttonText}) {
                     {description}
                 </p>
                 <button className="text-white bg-gray-900 px-4 py-2 rounded-lg mt-5 text-sm">{buttonText}</button>
+                {/* these are tailwind utility classes, extremely easy to use!!! */}
 
             </div>
 
