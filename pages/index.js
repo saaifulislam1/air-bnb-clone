@@ -14,13 +14,15 @@ export default function Home({ exploreData, cardsData }) {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+
       {/* Header */}
       <Header />
 
       {/* Banner */}
       <Banner />
 
-      {/* Main section */}
+      {/* Main section -> Static */}
       <main className="max-w-7xl mx-auto px-8 sm:px-16">
         <section className="pt-6">
           <h2 className="text-4xl font-semibold pb-5 ">Explore Nearby</h2>
@@ -32,7 +34,7 @@ export default function Home({ exploreData, cardsData }) {
                 key={item.img}
                 img={item.img}
                 distance={item.distance}
-                location={item.location}
+                atilocon={item.location}
               />
             ))}
           </div>
@@ -49,6 +51,7 @@ export default function Home({ exploreData, cardsData }) {
             ))}
           </div>
         </section>
+
         <section>
           <LargeCard
             img="https://links.papareact.com/4cj"
@@ -58,6 +61,7 @@ export default function Home({ exploreData, cardsData }) {
           />
         </section>
       </main>
+
       <Footer />
     </div>
   );

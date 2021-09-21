@@ -6,7 +6,7 @@ import { useRouter } from "next/dist/client/router";
 import InfoCard from "../components/InfoCard";
 import { format } from "date-fns";
  
-
+//This is the search page
 function Search({searchResults}) {
 
   const router = useRouter();
@@ -15,14 +15,12 @@ function Search({searchResults}) {
   const formattedendDate=format(new Date(endDate), "dd MMMM yy")
  const formattedDateRange=`${formattedstartDate}-${formattedendDate}`;
 
-  // const formattedstartDate=format(new Date(startDate), "dd MMMM yy")
-  // const formattedendDate=format(new Date(endDate), "dd MMMM yy")
-  // const formattedDateRange=`${formattedstartDate}-${formattedendDate}`
+  
 
 
   return (
     <div>
-      <Header placeHolder={`${location} | ${formattedDateRange} | ${noOfGuests} guests`} />
+      <Header  placeHolder={`${location} | ${formattedDateRange} | ${noOfGuests} guests`} />
       <main className="flex">
         <section className="flex-grow pt-14 px-6">
           <p className="text-xs font-bold px-2">300+ Stays from ({formattedDateRange} ),for {noOfGuests} guests</p>
@@ -39,7 +37,7 @@ function Search({searchResults}) {
             <p className="button">Room and Beds</p>
             <p className="button">More filters</p>
           </div>
-          
+
           <div className="flex flex-col">
           {
             searchResults.map(
